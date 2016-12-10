@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Dripdoctors"
+		x:Class="Dripdoctors.AccountDetailView">
+	<ContentView.Content>
+		<StackLayout Spacing = "10" BackgroundColor = "#fff" HorizontalOptions = "StartAndExpand" Padding = "30">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height = "1*"/>
+					<RowDefinition Height = "15"/>
+					<RowDefinition Height = "1*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width = ".4*"/>
+					<ColumnDefinition Width = "1*"/>
+				</Grid.ColumnDefinitions>
+				<Label Text = "E-mail:" TextColor = "Black" VerticalOptions = "CenterAndExpand" Grid.Row = "0" Grid.Column = "0">
+					<Label.FontFamily>
+						<OnPlatform x:TypeArguments="x:String">
+							<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+							<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+						</OnPlatform>
+					</Label.FontFamily>
+				</Label>
+				<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "1"  Grid.Row = "0" Grid.Column = "1" Opacity = ".5">
+					<Entry Text = "" x:Name = "txtEmail" IsEnabled = "false" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" WidthRequest = "120" BackgroundColor = "#fff"/>
+				</StackLayout>
+				<Label Text = "Password:" TextColor = "Black" VerticalOptions = "CenterAndExpand" Grid.Row = "2" Grid.Column = "0">
+					<Label.FontFamily>
+						<OnPlatform x:TypeArguments="x:String">
+							<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+							<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+						</OnPlatform>
+					</Label.FontFamily>
+				</Label>
+				<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "1" Grid.Row = "2" Grid.Column = "1" Opacity = ".5">
+					<Entry Text = "" x:Name = "txtPassword" IsEnabled = "false" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" WidthRequest = "120" BackgroundColor = "#fff"/>
+				</StackLayout>
+			</Grid>
+		</StackLayout>
+	</ContentView.Content>
+</local:BaseContentView>

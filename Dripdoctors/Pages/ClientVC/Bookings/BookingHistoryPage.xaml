@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		BackgroundImage = "background.png"
+		x:Class="Dripdoctors.BookingHistoryPage">
+	<ContentPage.Content>
+		<StackLayout Spacing = "0">
+			<StackLayout VerticalOptions = "Start" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "10">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "1*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<Button x:Name = "backButton" Text = "Bookings" TextColor = "#fff" HeightRequest = "30" VerticalOptions = "End" HorizontalOptions = "Start" Grid.Row = "0" Grid.Column = "0"/>
+					<Label Text = "Bookings History" TextColor = "#fff" HeightRequest = "50" VerticalTextAlignment = "End" VerticalOptions = "End" HorizontalOptions = "CenterAndExpand" LineBreakMode = "NoWrap" Grid.Row = "0" Grid.Column = "1"/>
+					<Button x:Name = "clearButton" Text = "Clear All" TextColor = "#fff" HeightRequest = "30" VerticalOptions = "End" HorizontalOptions = "End" Grid.Row = "0" Grid.Column = "2"/>
+				</Grid>
+			</StackLayout>
+			<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+				<ScrollView HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand">
+					<StackLayout x:Name = "bodyLayout" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand">
+
+					</StackLayout>
+				</ScrollView>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

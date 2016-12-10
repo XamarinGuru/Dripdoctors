@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+		x:Class="Dripdoctors.AlertPopup">
+		<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Padding = "50">
+			<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" Spacing = "10">
+				<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Padding = "10,10,10,0">
+					<Label x:Name = "titleLabel" Text = "Warning" FontAttributes = "Bold" FontSize = "20" TextColor = "#000"/>
+				</StackLayout>
+				<StackLayout Padding = "20">
+					<Label x:Name = "contentLabel" Text = "Please check your internet connection." TextColor = "#000" HorizontalTextAlignment = "Center" LineBreakMode = "WordWrap"/>
+				</StackLayout>
+				<Button x:Name = "agreeButton" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" Text = "OK" FontAttributes = "Bold" TextColor = "#01b3f0" BorderColor = "#ccc" BorderRadius = "0" BorderWidth = "1"/>
+			</StackLayout>
+		</StackLayout>
+</pages:PopupPage>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Dripdoctors"
+		VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"
+		x:Class="Dripdoctors.RequestMainView">
+	<ContentView.Content>
+		<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+		<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" RowSpacing = "0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height = ".08*"/>
+				<RowDefinition Height = "1*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width = "1*"/>
+			</Grid.ColumnDefinitions>
+			<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#c2c2c2" Grid.Row = "0" Grid.Column = "0">
+				<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" ColumnSpacing = "0">
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "1*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<local:CustomButton x:Name = "pandingButton" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Text = "Pending" TextColor = "#fff" Grid.Row = "0" Grid.Column = "0" BorderRadius = "0"/>
+					<local:CustomButton x:Name = "historyButton" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Text = "History" TextColor = "#fff" Grid.Row = "0" Grid.Column = "1" BorderRadius = "0"/>
+				</Grid>
+			</StackLayout>
+			<RelativeLayout Grid.Row = "1" Grid.Column = "0" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+				<StackLayout x:Name = "listLayout" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+				    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
+					RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+				    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=0}">
+				</StackLayout>
+				<StackLayout x:Name = "progressLayout" BackgroundColor = "Black" Opacity = "0.2" IsVisible = "false"
+						RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+					    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
+						RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+					    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=0}">
+					<Grid VerticalOptions = "CenterAndExpand" HorizontalOptions = "CenterAndExpand">
+						<local:CircleLoderView x:Name="progressControl" Progress="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="70" HeightRequest="70"/>
+					</Grid>
+				</StackLayout>
+			</RelativeLayout>
+		</Grid>			
+	</StackLayout>	
+	</ContentView.Content>
+</local:BaseContentView>

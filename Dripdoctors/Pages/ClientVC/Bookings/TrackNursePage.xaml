@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Dripdoctors"
+		x:Class="Dripdoctors.TrackNursePage">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Spacing = "0">
+			<StackLayout VerticalOptions = "Start" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "10" Spacing = "0">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "1*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<local:CustomButton x:Name = "backButton" Text = "Back" TextColor = "#fff" Grid.Row = "0" Grid.Column = "0" HorizontalOptions = "Start" VerticalOptions = "EndAndExpand"/>
+					<Label Text = "Track Nurse" FontSize = "20" TextColor = "#fff" Grid.Row = "0" Grid.Column = "1" VerticalTextAlignment = "End" HeightRequest = "50" VerticalOptions = "EndAndExpand" HorizontalOptions = "CenterAndExpand"/>
+					<Label x:Name = "userName" TextColor = "#fff" Grid.Row = "0" Grid.Column = "2" HorizontalOptions = "End" VerticalOptions = "EndAndExpand"/>
+				</Grid>
+			</StackLayout>
+			<StackLayout x:Name = "mapLayout" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand">
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

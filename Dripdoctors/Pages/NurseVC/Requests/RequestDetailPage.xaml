@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:local="clr-namespace:Dripdoctors"
+		x:Class="Dripdoctors.RequestDetailPage">
+	<ContentPage.Content>
+		<RelativeLayout x:Name = "layout" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+			<StackLayout x:Name = "mapLayout"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+			    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.55}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+			    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.45,Constant=0}">
+			</StackLayout>
+			<StackLayout x:Name = "profileLayout"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+			    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.45}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+			    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=0}">
+				<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" RowSpacing = "0">
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "60"/>
+						<RowDefinition Height = "1*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" BackgroundColor = "#01b3f0"
+							Grid.Row = "0" Grid.Column = "0">
+						<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Padding = "5">
+							<Grid.RowDefinitions>
+								<RowDefinition Height = "1*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width = "1.2*"/>
+								<ColumnDefinition Width = "1*"/>
+								<ColumnDefinition Width = "1.2*"/>
+							</Grid.ColumnDefinitions>
+							<local:CustomButton x:Name = "backButton" Text = "Dashboard" TextColor = "#fff" VerticalOptions = "FillAndExpand" Grid.Row = "0" Grid.Column = "0" HorizontalOptions = "StartAndExpand"/>
+							<Label Text = "Request Details" TextColor = "#fff" Grid.Row = "0" Grid.Column = "1" VerticalOptions = "CenterAndExpand" HorizontalOptions = "CenterAndExpand" HorizontalTextAlignment = "Center"/>
+							<local:CustomButton x:Name = "rightButton" Text = "Accept" TextColor = "#fff" VerticalOptions = "FillAndExpand" Grid.Row = "0" Grid.Column = "2" HorizontalOptions = "EndAndExpand"/>
+						</Grid>
+					</StackLayout>
+					<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand"
+							Grid.Row = "1" Grid.Column = "0">
+						<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" RowSpacing = "0">
+							<Grid.RowDefinitions>
+								<RowDefinition Height = "1*"/>
+								<RowDefinition Height = "65"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width = "1*"/>
+							</Grid.ColumnDefinitions>
+							<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" Padding = "5,10,5,5" Grid.Row = "0" Grid.Column = "0">
+								<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" ColumnSpacing = "20">
+									<Grid.RowDefinitions>
+										<RowDefinition Height = "1*"/>
+									</Grid.RowDefinitions>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width = ".6*"/>
+										<ColumnDefinition Width = "1*"/>
+									</Grid.ColumnDefinitions>
+									<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Grid.Row = "0" Grid.Column = "0" Padding = "1" Spacing = "1">
+										<Image x:Name = "profileImage" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"  Aspect = "AspectFill"/>
+										<Label x:Name = "clientNameLabel" FontSize = "15" TextColor = "#fff" HorizontalOptions = "CenterAndExpand" HorizontalTextAlignment = "Center" HeightRequest = "16"/>
+										<Label x:Name = "clientPhoneLabel" FontSize = "15" TextColor = "#fff" VerticalOptions = "Start" HorizontalOptions = "CenterAndExpand" HorizontalTextAlignment = "Center" HeightRequest = "16"/>
+									</StackLayout>
+									<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Grid.Row = "0" Grid.Column = "1">
+										<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+											<Grid.RowDefinitions>
+												<RowDefinition Height = "1*"/>
+												<RowDefinition Height = "1*"/>
+											</Grid.RowDefinitions>
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition Width = "1*"/>
+											</Grid.ColumnDefinitions>
+											<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Grid.Row = "0" Grid.Column = "0" Spacing = "0" Padding = "0,10,0,1">
+												<Label x:Name = "callTypeLabel" FontSize = "15" FontAttributes = "Bold"/>
+												<Label x:Name = "statusLabel" TextColor = "#01b3f0" FontSize = "12" HorizontalOptions = "StartAndExpand"/>
+												<Label x:Name = "addressLabel" FontSize = "12" HorizontalOptions = "StartAndExpand"/>
+											</StackLayout>
+											<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Grid.Row = "1" Grid.Column = "0">
+												<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+													<Grid.RowDefinitions>
+														<RowDefinition Height = "1*"/>
+														<RowDefinition Height = "1*"/>
+													</Grid.RowDefinitions>
+													<Grid.ColumnDefinitions>
+														<ColumnDefinition Width = ".6*"/>
+														<ColumnDefinition Width = "1*"/>
+													</Grid.ColumnDefinitions>
+													<StackLayout Grid.Row = "0" Grid.Column = "0" Grid.RowSpan = "2" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+														<Image x:Name = "serviceImage" WidthRequest = "70" HeightRequest = "70" VerticalOptions = "Center" HorizontalOptions = "Center"/>
+													</StackLayout>
+													<Label x:Name = "categoryNameLabel" TextColor = "#01b3f0" Grid.Row = "0" Grid.Column = "1" VerticalOptions = "EndAndExpand" HorizontalOptions = "StartAndExpand"/>
+													<Label x:Name = "productNameLabel" FontAttributes = "Bold" Grid.Row = "1" Grid.Column = "1" VerticalOptions = "StartAndExpand" HorizontalOptions = "StartAndExpand"/>
+												</Grid>		
+											</StackLayout>
+										</Grid>
+									</StackLayout>
+								</Grid>
+							</StackLayout>
+							<StackLayout x:Name = "buttonLayout" Grid.Row = "1" Grid.Column = "0" Padding = "10" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff">
+								<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+									<Grid.RowDefinitions>
+										<RowDefinition Height = "1*"/>
+									</Grid.RowDefinitions>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width = "1*"/>
+										<ColumnDefinition Width = "1*"/>
+									</Grid.ColumnDefinitions>
+									<Button x:Name = "declineButton" Text = "DECLINE" TextColor = "#fff" BorderRadius = "0" BackgroundColor = "#c2c2c2"
+											Grid.Row = "0" Grid.Column = "0"/>
+									<Button x:Name = "acceptButton" Text = "ACCEPT" TextColor = "#fff" BorderRadius = "0" BackgroundColor = "#01b3f0"
+											Grid.Row = "0" Grid.Column = "1"/>
+								</Grid>
+							</StackLayout>
+						</Grid>
+					</StackLayout>
+				</Grid>
+			</StackLayout>
+		</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>

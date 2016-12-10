@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+		x:Class="Dripdoctors.RequestPopupView">
+	<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" Padding = "20">
+		<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+			<Grid.RowDefinitions>
+				<RowDefinition Height = "1*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width = "1*"/>
+				<ColumnDefinition Width = "1*"/>
+				<ColumnDefinition Width = "1*"/>
+			</Grid.ColumnDefinitions>
+			<Button x:Name = "declineButton" Text = "DECLINE" TextColor = "#fff" VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand"
+				Grid.Row = "0" Grid.Column = "0" BackgroundColor = "#c2c2c2" BorderRadius = "0" HeightRequest = "45"/>
+			<Button x:Name = "acceptButton" Text = "ACCEPT" TextColor = "#fff" VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand"
+				Grid.Row = "0" Grid.Column = "1" BackgroundColor = "#01b3f0" BorderRadius = "0" HeightRequest = "45"/>
+			<Button x:Name = "detailButton" Text = "DETAIL" TextColor = "#fff" VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand"
+				Grid.Row = "0" Grid.Column = "2" BackgroundColor = "#c2c2c2" BorderRadius = "0" HeightRequest = "45"/>
+		</Grid>
+	</StackLayout>
+</pages:PopupPage>

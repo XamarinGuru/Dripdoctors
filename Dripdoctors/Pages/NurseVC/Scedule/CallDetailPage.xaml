@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Dripdoctors"
+		BackgroundImage = "background.jpg"
+		x:Class="Dripdoctors.CallDetailPage">
+	<ContentPage.Content>
+		<StackLayout x:Name = "profileLayout" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+			<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" RowSpacing = "0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height = "60"/>
+					<RowDefinition Height = "1*"/>
+					<RowDefinition Height = "1.7*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width = "1*"/>
+				</Grid.ColumnDefinitions>
+				<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" BackgroundColor = "#01b3f0"
+						Grid.Row = "0" Grid.Column = "0">
+					<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Padding = "5">
+						<Grid.RowDefinitions>
+							<RowDefinition Height = "1*"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width = "1.1*"/>
+							<ColumnDefinition Width = ".8*"/>
+							<ColumnDefinition Width = "1.1*"/>
+						</Grid.ColumnDefinitions>
+						<local:CustomButton x:Name = "backButton" FontSize = "12" Text = "Dashboard" TextColor = "#fff" HeightRequest = "50" Grid.Row = "0" Grid.Column = "0" HorizontalOptions = "StartAndExpand" VerticalOptions = "EndAndExpand"/>
+						<Label x:Name = "titleLabel" Text = "Call Details" TextColor = "#fff" Grid.Row = "0" Grid.Column = "1" VerticalOptions = "CenterAndExpand" HorizontalOptions = "CenterAndExpand" HorizontalTextAlignment = "Center"/>
+						<local:CustomButton x:Name = "rightButton" FontSize = "12" Text = "Get Directions" TextColor = "#fff" HeightRequest = "50" Grid.Row = "0" Grid.Column = "2" HorizontalOptions = "EndAndExpand" VerticalOptions = "EndAndExpand"/>
+					</Grid>
+				</StackLayout>
+				<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand"
+						Grid.Row = "1" Grid.Column = "0">
+					<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" RowSpacing = "0">
+						<Grid.RowDefinitions>
+							<RowDefinition Height = "1*"/>
+							<RowDefinition Height = "35"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width = "1*"/>
+						</Grid.ColumnDefinitions>
+						<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" Padding = "5,10,5,10" Grid.Row = "0" Grid.Column = "0">
+							<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" ColumnSpacing = "20">
+								<Grid.RowDefinitions>
+									<RowDefinition Height = "1*"/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width = ".6*"/>
+									<ColumnDefinition Width = "1*"/>
+								</Grid.ColumnDefinitions>
+								<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Grid.Row = "0" Grid.Column = "0" Padding = "1" Spacing = "1">
+									<Image x:Name = "profileImage" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Aspect = "AspectFill"/>
+									<Label x:Name = "clientNameLabel" FontSize = "15" TextColor = "#fff" HorizontalOptions = "CenterAndExpand" HorizontalTextAlignment = "Center" HeightRequest = "16"/>
+									<Label x:Name = "clientPhoneLabel" FontSize = "15" TextColor = "#fff" VerticalOptions = "Start" HorizontalOptions = "CenterAndExpand" HorizontalTextAlignment = "Center" HeightRequest = "16"/>
+								</StackLayout>
+								<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Grid.Row = "0" Grid.Column = "1">
+									<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+										<Grid.RowDefinitions>
+											<RowDefinition Height = "1*"/>
+											<RowDefinition Height = "1*"/>
+										</Grid.RowDefinitions>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width = "1*"/>
+										</Grid.ColumnDefinitions>
+										<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Grid.Row = "0" Grid.Column = "0" Spacing = "0" Padding = "0,10,0,1">
+											<Label x:Name = "callTypeLabel" FontSize = "15" FontAttributes = "Bold">
+												<Label.FontFamily>
+													<OnPlatform x:TypeArguments="x:String">
+														<OnPlatform.iOS>Golden Sans Medium</OnPlatform.iOS>
+														<OnPlatform.Android>Golden Sans Medium.otf</OnPlatform.Android>
+													</OnPlatform>
+												</Label.FontFamily>
+											</Label>
+											<Label x:Name = "statusLabel" TextColor = "#01b3f0" FontSize = "12" HorizontalOptions = "StartAndExpand"/>
+											<Label x:Name = "addressLabel" FontSize = "12" HorizontalOptions = "StartAndExpand"/>
+										</StackLayout>
+										<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Grid.Row = "1" Grid.Column = "0">
+											<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+												<Grid.RowDefinitions>
+													<RowDefinition Height = "1*"/>
+													<RowDefinition Height = "1*"/>
+												</Grid.RowDefinitions>
+												<Grid.ColumnDefinitions>
+													<ColumnDefinition Width = ".4*"/>
+													<ColumnDefinition Width = "1*"/>
+												</Grid.ColumnDefinitions>
+												<StackLayout Grid.Row = "0" Grid.Column = "0" Grid.RowSpan = "2" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+													<Image x:Name = "serviceImage" WidthRequest = "70" HeightRequest = "70" VerticalOptions = "Center" HorizontalOptions = "Center"/>
+												</StackLayout>
+												<Label x:Name = "categoryNameLabel" TextColor = "#01b3f0" Grid.Row = "0" Grid.Column = "1" VerticalOptions = "EndAndExpand" HorizontalOptions = "StartAndExpand"/>
+												<Label x:Name = "productNameLabel" FontAttributes = "Bold" Grid.Row = "1" Grid.Column = "1" VerticalOptions = "StartAndExpand" HorizontalOptions = "StartAndExpand">
+													<Label.FontFamily>
+														<OnPlatform x:TypeArguments="x:String">
+															<OnPlatform.iOS>Gilroy-ExtraBold</OnPlatform.iOS>
+															<OnPlatform.Android>Gilroy-ExtraBold.otf</OnPlatform.Android>
+														</OnPlatform>
+													</Label.FontFamily>
+												</Label>
+											</Grid>		
+										</StackLayout>
+									</Grid>
+								</StackLayout>
+							</Grid>
+						</StackLayout>
+						<StackLayout x:Name = "buttonLayout" Grid.Row = "1" Grid.Column = "0" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff">
+							<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" ColumnSpacing = "0" BackgroundColor = "#c2c2c2">
+								<Grid.RowDefinitions>
+									<RowDefinition Height = "1*"/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width = "1*"/>
+									<ColumnDefinition Width = "1*"/>
+									<ColumnDefinition Width = "1*"/>
+								</Grid.ColumnDefinitions>
+								<local:CustomButton x:Name = "activeButton" Text = "ACTIVATE" TextColor = "#fff" BorderRadius = "0" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"
+										Grid.Row = "0" Grid.Column = "0"/>
+								<local:CustomButton x:Name = "contactButton" Text = "CONTACT" TextColor = "#fff" BorderRadius = "0" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"
+										Grid.Row = "0" Grid.Column = "1"/>
+								<local:CustomButton x:Name = "cancelButton" Text = "CANCEL" TextColor = "#fff" BorderRadius = "0" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"
+										Grid.Row = "0" Grid.Column = "2"/>
+							</Grid>
+						</StackLayout>
+					</Grid>
+				</StackLayout>
+				<StackLayout x:Name = "bodyLayout" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Grid.Row = "2" Grid.Column = "0">
+					
+				</StackLayout>
+			</Grid>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

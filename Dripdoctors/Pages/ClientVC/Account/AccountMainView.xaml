@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Dripdoctors"
+		x:Class="Dripdoctors.AccountMainView"
+		VerticalOptions="FillAndExpand">
+	<ContentView.Content>
+		<RelativeLayout>
+			<StackLayout x:Name = "accountHeaderLayout" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" 
+					Orientation = "Horizontal" BackgroundColor = "#c2c2c2" HeightRequest = "40"
+					RelativeLayout.WidthConstraint="{ConstraintExpression
+	            		Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+					RelativeLayout.XConstraint =
+					  	"{ConstraintExpression Type=RelativeToParent,
+						ElementName=stl_menu,Property=Width,Factor=0,Constant=0}"
+				    RelativeLayout.YConstraint =
+				      	"{ConstraintExpression Type=RelativeToParent,
+						ElementName=stl_menu,Property=Y,Factor=0,Constant=0}">
+				<Grid x:Name = "subMenuGrid" HorizontalOptions = "FillAndExpand" ColumnSpacing = "0">
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "40"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+						<local:CustomButton x:Name = "btnProfile" BorderRadius = "0" Text = "Profile" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" TextColor = "#fff" Grid.Row = "0" Grid.Column = "0" />
+						<local:CustomButton x:Name = "btnAccount" BorderRadius = "0" Text = "Account" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" TextColor = "#fff" Grid.Row = "0" Grid.Column = "1" />
+						<local:CustomButton x:Name = "btnPayments" BorderRadius = "0" Text = "Payments" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" TextColor = "#fff" Grid.Row = "0" Grid.Column = "2" />
+				</Grid>
+			</StackLayout>
+
+			<StackLayout x:Name = "accountBodyLayout" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+			    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+			    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=-183}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,ElementName=stl_menu,Property=Width,Factor=0,Constant=0}"
+			    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,ElementName=stl_menu,Property=Y,Factor=0,Constant=40}">
+			</StackLayout>
+		</RelativeLayout>
+	</ContentView.Content>
+</local:BaseContentView>

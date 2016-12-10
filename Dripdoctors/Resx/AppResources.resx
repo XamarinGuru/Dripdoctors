@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+	<data name="ServiceWelcomeSentence1" xml:space="preserve">
+	    <value>Your request has been successfully submitted and Drip Doctors will respond shortly!</value>
+	    <comment></comment>
+	</data>
+	<data name="ServiceWelcomeSentence2" xml:space="preserve">
+	    <value>An email confirmation has been sent to you. You may check the status of your booking here.</value>
+	    <comment></comment>
+	</data>
+	<data name="CallAcceptSentence1" xml:space="preserve">
+	    <value>You have accepted this call and your client has sent a notification.</value>
+	    <comment></comment>
+	</data>
+	<data name="CallAcceptSentence2" xml:space="preserve">
+	    <value>This call has been added to your Schedule which can be viewed in your tab menu</value>
+	    <comment></comment>
+	</data>
+	<data name="CallCompletedSentence1" xml:space="preserve">
+	    <value>Your schedule has been updated and your status has been changed to Active.</value>
+	    <comment></comment>
+	</data>
+	<data name="CallCompletedSentence2" xml:space="preserve">
+	    <value>Now you are available to take new calls</value>
+	    <comment></comment>
+	</data>
+</root>

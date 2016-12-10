@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Dripdoctors.SignInPage"
+		BackgroundImage = "background.jpg">
+	<ContentPage.Content>
+		<StackLayout Padding = "5" VerticalOptions="FillAndExpand" HorizontalOptions = "FillAndExpand">
+			<StackLayout x:Name = "topLogoLayout" VerticalOptions = "StartAndExpand" HorizontalOptions = "FillAndExpand" Padding = "30,30,30,10">
+				<Image Source = "logo.png" VerticalOptions = "EndAndExpand" HorizontalOptions = "CenterAndExpand"/>
+			</StackLayout>
+			<StackLayout Spacing="15" BackgroundColor = "#fff" Padding="10,30,10,10" HorizontalOptions = "FillAndExpand" VerticalOptions = "StartAndExpand" TranslationX = "-2" TranslationY = "-2">
+				<Label Text = "Sign In" HorizontalTextAlignment = "Center" TextColor = "#000">
+					<Label.FontFamily>
+						<OnPlatform x:TypeArguments="x:String">
+							<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+							<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+						</OnPlatform>
+					</Label.FontFamily>
+				</Label>
+				<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor = "#01b3f0" Padding="1" Opacity = ".5">
+					<Entry x:Name = "txt_mail" Text = "" Placeholder="E-mail" BackgroundColor = "#fff" HeightRequest = "45"/>
+				</StackLayout>
+				<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#01b3f0" Padding="1" Opacity = ".5">
+					<Entry x:Name = "txt_pwd" Text = "" Placeholder="Password" IsPassword="True" BackgroundColor = "#fff" HeightRequest = "45"/>
+				</StackLayout>
+				<StackLayout Spacing = "30" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" Padding = "15, 0, 15, 0">
+					<Button x:Name="btnSignin" Text="SIGN IN" BorderRadius = "2" Font = "Golden Sans Light.otf" TextColor="#fff" BackgroundColor="#c2c2c2" HeightRequest = "45"/>
+				</StackLayout>
+				<StackLayout  Spacing = "15" HorizontalOptions = "FillAndExpand" VerticalOptions = "EndAndExpand" Padding = "15, 0, 15, 5">
+					<Label Text = "Don't have an account?" HorizontalTextAlignment = "Center">
+						<Label.FontFamily>
+							<OnPlatform x:TypeArguments="x:String">
+								<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+								<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+							</OnPlatform>
+						</Label.FontFamily>
+					</Label>
+					<Button x:Name="btnSignup" Text="SIGN UP NOW!" BorderRadius = "2" Font = "Golden Sans Light.otf" TextColor="#fff" BackgroundColor="#01b3f0" HeightRequest = "45"/>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

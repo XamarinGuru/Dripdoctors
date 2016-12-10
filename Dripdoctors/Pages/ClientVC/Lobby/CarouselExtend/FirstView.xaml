@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+		x:Class="Dripdoctors.FirstView">
+	<ContentView.Content>
+		<ScrollView>
+	    <StackLayout Padding="12" Spacing="12" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "Aqua">
+
+<!--		    <controls:CVActivityIndicator x:Name="activityIndicator" IsRunning="true"/>
+			<Button x:Name="button" Text="Remove this page" Clicked="Handle_Clicked">
+				<Button.HeightRequest>
+					<OnPlatform x:TypeArguments="x:Double"
+                        Android="48"
+                        iOS="44"
+						WinPhone="32"/>
+				</Button.HeightRequest>
+			</Button>
+			<controls:CVDatePicker x:Name="datePicker" />
+			<controls:CVEditor x:Name="editor" BackgroundColor="Silver"/>
+			<controls:CVEntry x:Name="entry" />
+			<controls:CVPicker x:Name="picker" />
+			<controls:CVProgressBar x:Name="progressBar" Progress="0.5" />
+			<controls:CVSearchBar x:Name="searchBar" />
+			<controls:CVSlider x:Name="slider" />
+			<controls:CVStepper x:Name="stepper" />
+			<controls:CVSwitch x:Name="myswitch" />
+			<controls:CVTimePicker x:Name="timePicker" />
+			<controls:CVLabel x:Name="label" Text="My Label"/>
+-->
+		</StackLayout>
+	</ScrollView>
+	</ContentView.Content>
+</ContentView>

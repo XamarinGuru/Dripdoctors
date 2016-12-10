@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:local="clr-namespace:Dripdoctors"
+		x:Class="Dripdoctors.AccountDetailEditPage"
+		BackgroundImage = "background.jpg">
+	<ContentPage.Content>
+		<StackLayout HorizontalOptions = "FillAndExpand" Spacing = "0">
+			<StackLayout BackgroundColor = "#01b3f0" Padding = "5" Orientation = "Horizontal" HorizontalOptions = "FillAndExpand" VerticalOptions = "Start" HeightRequest = "60">
+				<Grid HorizontalOptions = "FillAndExpand" VerticalOptions = "EndAndExpand">
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "40"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<local:CustomButton x:Name = "btnDetailBack" Text = "Cancel" TextColor = "#fff" Font = "Golden Sans Light.otf" Grid.Row = "0" Grid.Column = "0" VerticalOptions = "EndAndExpand" HorizontalOptions = "Start"/>
+					<Label Text = "Edit Account Details" TextColor = "#fff" FontSize = "15" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" Grid.Row = "0" Grid.Column = "1" VerticalOptions = "EndAndExpand" HorizontalOptions = "CenterAndExpand">
+						<Label.FontFamily>
+							<OnPlatform x:TypeArguments="x:String">
+								<OnPlatform.iOS>Golden Sans Light</OnPlatform.iOS>
+								<OnPlatform.Android>Golden Sans Light.otf</OnPlatform.Android>
+							</OnPlatform>
+						</Label.FontFamily>
+					</Label>
+					<local:CustomButton x:Name = "btnDetailSave" Text = "Save" TextColor = "#fff" Font = "Golden Sans Light.otf" Grid.Row = "0" Grid.Column = "2" VerticalOptions = "EndAndExpand" HorizontalOptions = "End"/>
+				</Grid>
+			</StackLayout>
+			<StackLayout Spacing = "15" BackgroundColor = "#fff" HorizontalOptions = "Start" VerticalOptions = "StartAndExpand" Padding = "30">
+				<Grid RowSpacing = "2" ColumnSpacing = "2" Padding = "2">
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "45"/>
+						<RowDefinition Height = "3"/>
+						<RowDefinition Height = "45"/>
+						<RowDefinition Height = "3"/>
+						<RowDefinition Height = "45"/>
+						<RowDefinition Height = "3"/>
+						<RowDefinition Height = "45"/>
+						<RowDefinition Height = "3"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = ".4*"/>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<Label Text = "E-mail:" TextColor = "Black" VerticalOptions = "CenterAndExpand" Grid.Row = "0" Grid.Column = "0">
+						<Label.FontFamily>
+							<OnPlatform x:TypeArguments="x:String">
+								<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+								<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+							</OnPlatform>
+						</Label.FontFamily>
+					</Label>
+					<StackLayout BackgroundColor = "#01b3f0" Padding = "1"  Grid.Row = "0" Grid.Column = "1" Opacity = ".5">
+						<Entry x:Name = "txtEmail" IsEnabled = "false" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" HeightRequest = "40" BackgroundColor = "#fff"/>
+					</StackLayout>
+					<Label Text = "Password:" TextColor = "Black" VerticalOptions = "CenterAndExpand" Grid.Row = "2" Grid.Column = "0">
+						<Label.FontFamily>
+							<OnPlatform x:TypeArguments="x:String">
+								<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+								<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+							</OnPlatform>
+						</Label.FontFamily>
+					</Label>
+					<StackLayout BackgroundColor = "#01b3f0" Padding = "1" Grid.Row = "2" Grid.Column = "1" Opacity = ".5">
+						<Entry x:Name = "txtOldPassword" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" IsPassword = "true" HeightRequest = "40" BackgroundColor = "#fff"/>
+					</StackLayout>
+					<Label Text = "New Password:" TextColor = "Black" LineBreakMode="WordWrap" VerticalOptions = "CenterAndExpand" Grid.Row = "4" Grid.Column = "0">
+						<Label.FontFamily>
+							<OnPlatform x:TypeArguments="x:String">
+								<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+								<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+							</OnPlatform>
+						</Label.FontFamily>
+					</Label>
+					<StackLayout BackgroundColor = "#01b3f0" Padding = "1"  Grid.Row = "4" Grid.Column = "1" Opacity = ".5">
+						<Entry x:Name = "txtNewPassword" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"  IsPassword = "true" HeightRequest = "40" BackgroundColor = "#fff"/>
+					</StackLayout>
+					<Label Text = "Confirm Password:" TextColor = "Black" LineBreakMode="WordWrap" VerticalOptions = "CenterAndExpand" Grid.Row = "6" Grid.Column = "0">
+						<Label.FontFamily>
+							<OnPlatform x:TypeArguments="x:String">
+								<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+								<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+							</OnPlatform>
+						</Label.FontFamily>
+					</Label>
+					<StackLayout BackgroundColor = "#01b3f0" Padding = "1" Grid.Row = "6" Grid.Column = "1" Opacity = ".5">
+						<Entry x:Name = "txtConfirmPassword" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"  IsPassword = "true" HeightRequest = "40" BackgroundColor = "#fff"/>
+					</StackLayout>
+				</Grid>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

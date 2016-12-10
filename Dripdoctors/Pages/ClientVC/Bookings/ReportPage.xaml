@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Dripdoctors.ReportPage"
+		BackgroundImage = "background.jpg">
+	<ContentPage.Content>
+		<StackLayout Spacing = "0">
+			<StackLayout VerticalOptions = "Start" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "10">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "1*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<Button x:Name = "cancelButton" Text = "Cancel" TextColor = "#fff" HeightRequest = "30" VerticalOptions = "End" HorizontalOptions = "Start" Grid.Row = "0" Grid.Column = "0"/>
+					<Label Text = "Edit Bookings" TextColor = "#fff" HeightRequest = "50" VerticalTextAlignment = "End" VerticalOptions = "End" HorizontalOptions = "CenterAndExpand" Grid.Row = "0" Grid.Column = "1"/>
+					<Button x:Name = "updateButton" Text = "Update" TextColor = "#fff" HeightRequest = "30" VerticalOptions = "End" HorizontalOptions = "End" Grid.Row = "0" Grid.Column = "2"/>
+				</Grid>
+			</StackLayout>
+			<StackLayout BackgroundColor = "#fff" HorizontalOptions = "FillAndExpand" VerticalOptions = "Center">
+				<Label Text = "adf"/>
+			</StackLayout>
+			<StackLayout BackgroundColor = "Aqua" HorizontalOptions = "FillAndExpand" VerticalOptions = "EndAndExpand">
+				<Label Text = "adf"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

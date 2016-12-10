@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Dripdoctors"
+		BackgroundImage = "background.jpg"
+		x:Class="Dripdoctors.NurseMainPage">
+	<ContentPage.Content>
+		<RelativeLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+			<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" RowSpacing = "0"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+			    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+			    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=0}">
+				<Grid.RowDefinitions>
+					<RowDefinition Height = "60"/>
+					<RowDefinition Height = "1*"/>
+					<RowDefinition Height = ".1*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width = "1*"/>
+				</Grid.ColumnDefinitions>
+				<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" HeightRequest = "50" BackgroundColor = "#01b3f0" Grid.Row = "0" Grid.Column = "0" Padding = "10">
+					<Grid x:Name = "logoGrid" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+						<Grid.RowDefinitions>
+							<RowDefinition Height = "1*"/>
+						</Grid.RowDefinitions>	
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width = "1*"/>
+							<ColumnDefinition Width = "1*"/>
+							<ColumnDefinition Width = "1*"/>
+						</Grid.ColumnDefinitions>
+						<Image Source = "drip_off.png" VerticalOptions = "EndAndExpand" HorizontalOptions = "StartAndExpand"  Grid.Row = "0" Grid.Column = "0" WidthRequest = "30" HeightRequest = "30"/>
+						<Label x:Name = "titleLabel" Text = "Dashboard" TextColor = "#fff" FontSize = "20" VerticalOptions = "CenterAndExpand" HorizontalOptions = "CenterAndExpand" Grid.Row = "0" Grid.Column = "1"/>
+						<local:CustomButton Text = "Active" TextColor = "#fff" FontSize = "12" HeightRequest = "50" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Grid.Row = "0" Grid.Column = "2"/>
+					</Grid>
+				</StackLayout>
+				<StackLayout x:Name = "bodyLayout" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" Grid.Row = "1" Grid.Column = "0">
+				</StackLayout>
+				<Grid HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" Grid.Row = "2" Grid.Column = "0">
+					<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" HeightRequest = "40" TranslationX = "0" TranslationY = "-1" BackgroundColor = "#000" Opacity = ".1">
+					</StackLayout>
+					<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" HeightRequest = "40" BackgroundColor = "#fff"  Padding = "5">
+						<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+							<Grid.RowDefinitions>
+								<RowDefinition Height = "1*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width = "1*"/>
+								<ColumnDefinition Width = "1*"/>
+								<ColumnDefinition Width = "1*"/>
+								<ColumnDefinition Width = "1*"/>
+							</Grid.ColumnDefinitions>
+							<Image x:Name = "dashboardButton" Source = "dashboard_selected.png" Grid.Row = "0" Grid.Column = "0"/>
+							<Image x:Name = "scheduleButton" Source = "schedule_normal.png" Grid.Row = "0" Grid.Column = "1"/>
+							<Image x:Name = "requestButton" Source = "request_normal.png" Grid.Row = "0" Grid.Column = "2"/>
+							<Image x:Name = "accountButton" Source = "account_normal.png" Grid.Row = "0" Grid.Column = "3"/>
+						</Grid>
+					</StackLayout>
+				</Grid>
+			</Grid>
+			<Grid x:Name = "statusLayout" IsVisible = "false"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+				    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0,Constant = 80}"
+					RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+				    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=60}">
+				<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" TranslationX = "0" TranslationY = "2" BackgroundColor = "#000" Opacity = ".1">
+				</StackLayout>
+				<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff">
+					<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+						<Grid.RowDefinitions>
+							<RowDefinition Height = "1*"/>
+							<RowDefinition Height = "1*"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width = "1*"/>
+						</Grid.ColumnDefinitions>
+						<Label Text = "Set your status" FontSize = "17" FontAttributes = "Bold" HorizontalTextAlignment = "Center" VerticalOptions = "CenterAndExpand" HorizontalOptions = "CenterAndExpand"
+								Grid.Row = "0" Grid.Column = "0"/>
+						<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Orientation = "Horizontal" Grid.Row = "1" Grid.Column = "0">
+							<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+								<Grid.RowDefinitions>
+									<RowDefinition Height = "1*"/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width = "1*"/>
+									<ColumnDefinition Width = ".5*"/>
+									<ColumnDefinition Width = "1*"/>
+								</Grid.ColumnDefinitions>
+								<local:CustomButton x:Name = "activeButton" Text = "Active" TextColor = "#000" VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" Grid.Row = "0" Grid.Column = "0"/>
+								<local:CustomButton x:Name = "oncallButton" Text = "On Call" TextColor = "#000" VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" Grid.Row = "0" Grid.Column = "1"/>
+								<local:CustomButton x:Name = "unavailableButton" Text = "Unavailable" TextColor = "#000" VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" Grid.Row = "0" Grid.Column = "2"/>
+							</Grid>
+						</StackLayout>
+					</Grid>
+				</StackLayout>
+			</Grid>
+			<Grid x:Name = "activeStatusLayout" IsVisible = "false"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+				    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0,Constant = 120}"
+					RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+				    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=60}">
+				<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" TranslationX = "0" TranslationY = "2" BackgroundColor = "#000" Opacity = ".1">
+				</StackLayout>
+				<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff">
+					<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Padding = "5" RowSpacing = "0">
+						<Grid.RowDefinitions>
+							<RowDefinition Height = "1*"/>
+							<RowDefinition Height = "1*"/>
+							<RowDefinition Height = "1*"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width = ".1*"/>
+							<ColumnDefinition Width = "1*"/>
+							<ColumnDefinition Width = ".1*"/>
+						</Grid.ColumnDefinitions>
+					<Label Text = "You can't change your status during an active call!" VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" LineBreakMode = "WordWrap"
+							Grid.Row = "0" Grid.Column = "0" Grid.ColumnSpan = "3"/>
+					<Label Text = "Please complete your current call first." VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" HorizontalTextAlignment = "Center" LineBreakMode = "WordWrap"
+							Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan = "3"/>
+					<Button x:Name = "activeCallButton" Text = "ACTIVE CALL DETAILS" TextColor = "#fff" BackgroundColor = "#01b3f0" BorderRadius = "0"
+							Grid.Row = "2" Grid.Column = "1"/>
+					</Grid>
+				</StackLayout>
+			</Grid>
+		</RelativeLayout>
+	</ContentPage.Content>
+</local:BaseContentPage>

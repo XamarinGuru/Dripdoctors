@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Dripdoctors"
+		x:Class="Dripdoctors.BookingsMainView" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+	<ContentView.Content>
+		<RelativeLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+			<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "StartAndExpand" Orientation = "Horizontal" HeightRequest = "40"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+					RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+			    	RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=0}">
+				<Grid VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#c2c2c2" ColumnSpacing = "0">
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "1*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<local:CustomButton x:Name = "allButton" FontSize = "12" Text = "All" TextColor = "#fff" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BorderRadius = "0" Grid.Row = "0" Grid.Column = "0"/>
+					<local:CustomButton x:Name = "confirmButton" FontSize = "12" Text = "Confirmed" TextColor = "#fff" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BorderRadius = "0" Grid.Row = "0" Grid.Column = "1"/>
+					<local:CustomButton x:Name = "pendingButton" FontSize = "12" Text = "Pending" TextColor = "#fff" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BorderRadius = "0" Grid.Row = "0" Grid.Column = "2"/>
+					<local:CustomButton x:Name = "declineButton" FontSize = "12" Text = "Declined" TextColor = "#fff" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BorderRadius = "0" Grid.Row = "0" Grid.Column = "3"/>
+				</Grid>
+			</StackLayout>
+			<StackLayout x:Name = "progressLayout" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "Black" Opacity = "0.5"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+					RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=-45}"
+					RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=40}">
+				<Grid VerticalOptions = "CenterAndExpand" HorizontalOptions = "CenterAndExpand">
+					<local:CircleLoderView x:Name="progressControl" Progress="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="70" HeightRequest="70"/>
+				</Grid>
+			</StackLayout>
+			<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" HeightRequest = "500"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+					RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=-40}"
+					RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+			    	RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=40}">
+				<ScrollView HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" HeightRequest = "200">
+					<StackLayout x:Name = "bodyLayout" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand">
+
+					</StackLayout>
+				</ScrollView>
+			</StackLayout>
+		</RelativeLayout>
+	</ContentView.Content>
+</local:BaseContentView>

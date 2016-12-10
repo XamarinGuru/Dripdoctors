@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Dripdoctors"
+		x:Class="Dripdoctors.ClientMainPage"
+		xmlns:controls="clr-namespace:Xamarin.Forms.Labs.Controls;assembly=Xamarin.Forms.Labs"
+		BackgroundImage = "background.jpg">
+	
+	<ContentPage.Content>
+		<RelativeLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand">
+			<StackLayout x:Name = "logoLayout" 
+				VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" HeightRequest = "50"
+				Padding = "10, 20, 10, 5" Orientation = "Horizontal" BackgroundColor = "#01b3f0" 
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}">
+				<Grid x:Name = "logoGrid" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}">
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "1*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<Image x:Name = "logoButton" HorizontalOptions = "Start" Grid.Row = "0" Grid.Column = "0" HeightRequest = "25" WidthRequest = "25"/>
+					<Label x:Name = "lblTitle" Text = "SERVICES" TextColor = "#fff" FontSize = "15" HorizontalTextAlignment = "Center" VerticalOptions = "Center" Grid.Row = "0" Grid.Column = "1"/>
+					<Button x:Name = "btnUerName" TextColor = "#fff" Font = "13" Grid.Row = "0" Grid.Column = "2" VerticalOptions = "FillAndExpand" HorizontalOptions = "EndAndExpand" BackgroundColor = "Red"/>
+				</Grid>
+			</StackLayout>
+			<StackLayout x:Name = "bodyLayout" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+			    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+			    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=-120}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
+			    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=125}">
+			</StackLayout>
+			<StackLayout x:Name = "menuLayout" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" HeightRequest = "45" BackgroundColor = "#fff" Padding = "5"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,ElementName=stl_top,Property=Width,Factor=0,Constant=0}"
+				RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,ElementName=stl_top,Property=Y,Factor=0,Constant=75}">			
+				<Grid x:Name = "menuGrid" HorizontalOptions = "Center"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}">
+				</Grid>
+			</StackLayout>
+		</RelativeLayout>
+	</ContentPage.Content>
+</local:BaseContentPage>

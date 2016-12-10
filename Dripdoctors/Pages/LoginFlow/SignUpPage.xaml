@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Dripdoctors.SignUpPage"
+		BackgroundImage = "background.jpg">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions = "FillAndExpand" Padding = "5">
+			<StackLayout x:Name = "topLogoLayout" VerticalOptions = "StartAndExpand" HorizontalOptions = "FillAndExpand"
+				Padding = "30,30,30,0">
+				<Image Source = "logo.png" VerticalOptions = "EndAndExpand" HorizontalOptions = "CenterAndExpand"/>
+			</StackLayout>
+			<StackLayout Spacing="15" Padding="10,30,10,10" VerticalOptions="StartAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff">
+				<Label Text = "Create Account" HorizontalTextAlignment = "Center" TextColor = "#000"/>
+				<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor = "#01b3f0" Padding="1" Opacity = ".5">
+					<Entry x:Name = "txt_mail" Placeholder="E-mail" BackgroundColor = "#fff" HeightRequest = "45"/>
+				</StackLayout>
+				<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#01b3f0" Padding="1" Opacity = ".5">
+					<Entry x:Name = "txt_pwd" Placeholder="Password" IsPassword="True" BackgroundColor = "#fff" HeightRequest = "45"/>
+				</StackLayout>
+				<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#01b3f0" Padding="1" Opacity = ".5">
+					<Entry x:Name = "txt_cpwd" Placeholder="Confirm Password" IsPassword="True" BackgroundColor = "#fff" HeightRequest = "45"/>
+				</StackLayout>
+				<StackLayout Padding = "15, 0, 15, 0" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand">
+					<Button x:Name = "btnSignup" Text="SIGN UP NOW" BorderRadius = "0" HeightRequest = "45" TextColor="#fff" BackgroundColor="#01b3f0"/>
+				</StackLayout>
+				<StackLayout Spacing = "20" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" Padding = "15, 0, 15, 0">
+					<Label Text = "Already have an account?" HorizontalTextAlignment = "Center" TextColor = "#000"/>
+					<Button x:Name = "btnSignin" Text="SIGN IN" BorderRadius = "0" HeightRequest = "45" TextColor="#fff" BackgroundColor="#c2c2c2"/>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

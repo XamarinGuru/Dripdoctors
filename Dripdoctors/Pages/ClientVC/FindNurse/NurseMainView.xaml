@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:local="clr-namespace:Dripdoctors"
+		x:Class="Dripdoctors.NurseMainView" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+	<ContentPage.Content>
+		<RelativeLayout>
+			<StackLayout x:Name = "mapLayout" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+					RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=0}" >
+			</StackLayout>
+			<StackLayout x:Name = "profileLayout" VerticalOptions = "EndAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" Padding = "15" IsVisible = "false"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+					RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}">
+				<StackLayout HorizontalOptions = "EndAndExpand" Orientation = "Horizontal">
+					<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "StartAndExpand" Padding = "10">
+						<StackLayout BackgroundColor = "#01b3f0" Padding = "1">
+							<Image x:Name = "profileImage" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"/>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout VerticalOptions = "StartAndExpand" HorizontalOptions = "FillAndExpand" Spacing = "20" Padding = "10">
+						<StackLayout VerticalOptions = "StartAndExpand" HorizontalOptions = "FillAndExpand">
+							<Label x:Name = "nameLabel" FontAttributes = "Bold"/>
+							<Label x:Name = "addressLabel"/>
+						</StackLayout>
+						<StackLayout HorizontalOptions = "FillAndExpand">
+							<Label x:Name = "completedServiceLabel"/>
+							<StackLayout Orientation = "Horizontal">
+								<Image x:Name = "starImage1" Source = "star.png" HeightRequest = "25"/>
+								<Image x:Name = "starImage2" Source = "star.png" HeightRequest = "25"/>
+								<Image x:Name = "starImage3" Source = "star.png" HeightRequest = "25"/>
+								<Image x:Name = "starImage4" Source = "star.png" HeightRequest = "25"/>
+								<Image x:Name = "starImage5" Source = "star.png" HeightRequest = "25"/>
+							</StackLayout>
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
+				<!--<StackLayout HorizontalOptions = "FillAndExpand">
+					<ScrollView x:Name = "serviceScrollView" Orientation = "Horizontal">
+					</ScrollView>
+					<Button x:Name = "requestButton" Text = "" TextColor = "#fff" BackgroundColor = "#01b3f0" HorizontalOptions = "FillAndExpand" BorderRadius = "0"/>
+				</StackLayout>-->
+			</StackLayout>
+		</RelativeLayout>
+	</ContentPage.Content>
+</local:BaseContentView>

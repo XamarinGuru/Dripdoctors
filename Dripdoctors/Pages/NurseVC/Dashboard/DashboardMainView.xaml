@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:local="clr-namespace:Dripdoctors"
+		VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"
+		x:Class="Dripdoctors.DashboardMainView">
+	<ContentView.Content>
+		<RelativeLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand">
+			<StackLayout x:Name = "listLayout" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+				    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
+					RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+				    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=0}">
+			</StackLayout>
+			<StackLayout x:Name = "progressLayout" BackgroundColor = "Black" Opacity = "0.2" IsVisible = "false"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+				    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
+					RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+				    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=0}">
+				<Grid VerticalOptions = "CenterAndExpand" HorizontalOptions = "CenterAndExpand">
+					<local:CircleLoderView x:Name="progressControl" Progress="0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="70" HeightRequest="70"/>
+				</Grid>
+			</StackLayout>
+		</RelativeLayout>
+	</ContentView.Content>
+</local:BaseContentView>

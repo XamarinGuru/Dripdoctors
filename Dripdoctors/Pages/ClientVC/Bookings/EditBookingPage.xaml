@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Dripdoctors.EditBookingPage"
+		xmlns:local="clr-namespace:Dripdoctors"
+		BackgroundImage = "background.jpg">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Spacing = "0">
+			<StackLayout VerticalOptions = "Start" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "10">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "1*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<local:CustomButton x:Name = "cancelButton" Text = "Cancel" TextColor = "#fff" HeightRequest = "30" VerticalOptions = "End" HorizontalOptions = "Start" Grid.Row = "0" Grid.Column = "0"/>
+					<Label Text = "Edit Bookings" TextColor = "#fff" HeightRequest = "50" VerticalOptions = "End" HorizontalOptions = "CenterAndExpand" Grid.Row = "0" Grid.Column = "1"/>
+					<local:CustomButton x:Name = "updateButton" Text = "Update" TextColor = "#fff" HeightRequest = "30" VerticalOptions = "End" HorizontalOptions = "End" Grid.Row = "0" Grid.Column = "2"/>
+				</Grid>
+			</StackLayout>
+			<StackLayout HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" Padding = "15,30,15,40" Spacing = "20">
+				<Label Text = "Tap the section you want to edit." FontAttributes = "Bold" FontSize = "20" HorizontalOptions = "CenterAndExpand"/>
+				<Label Text = "Note: All confirmed bookings will received pending status after you edit or make changes." HorizontalTextAlignment = "Center" HorizontalOptions = "CenterAndExpand" LineBreakMode = "WordWrap"/>
+			</StackLayout>
+			<StackLayout VerticalOptions = "EndAndExpand" HorizontalOptions = "FillAndExpand" Padding = "25,20,20,20" BackgroundColor = "#fff">
+				<StackLayout Orientation = "Horizontal">
+					<Label Text = "SERVICE/PRODUCT" TextColor = "#ddd" VerticalOptions = "Start" HorizontalOptions = "StartAndExpand"/>
+					<Button x:Name = "serviceInfoEditButton" Image = "booking_edit_button.png" VerticalOptions = "Start" HorizontalOptions = "End" HeightRequest = "20" WidthRequest = "20"/>
+				</StackLayout>
+				<StackLayout Orientation = "Horizontal">
+					<Image x:Name = "serviceImage" HeightRequest = "50" WidthRequest = "50"/>
+					<StackLayout>
+						<Label x:Name = "serviceNameLabel" TextColor = "#01b3f0"/>
+						<Label x:Name = "servicePriceLabel"/>
+					</StackLayout>
+				</StackLayout>
+				<StackLayout Orientation = "Horizontal">
+					<StackLayout VerticalOptions = "Start" HorizontalOptions = "StartAndExpand">
+						<Label Text = "ADDRESS DATE/TIME" TextColor = "#ddd"/>
+						<Label x:Name = "dateLabel" />
+						<Label x:Name = "bookingTypeLabel" FontAttributes = "Bold"/>
+						<Label x:Name = "addressLabel"/>
+					</StackLayout>
+					<Button x:Name = "bookingInfoEditButton" Image = "booking_edit_button.png" VerticalOptions = "Start" HorizontalOptions = "End" HeightRequest = "20" WidthRequest = "20"/>
+				</StackLayout>
+				<StackLayout Orientation = "Horizontal">
+					<Label Text = "NURSE" TextColor = "#ddd" VerticalOptions = "Start" HorizontalOptions = "StartAndExpand"/>
+					<Button x:Name = "nurseInfoEditButton" Image = "booking_edit_button.png" VerticalOptions = "Start" HorizontalOptions = "End" HeightRequest = "20" WidthRequest = "20"/>
+				</StackLayout>
+				<StackLayout Orientation = "Horizontal">
+					<StackLayout Padding = "1" BackgroundColor = "#01b3f0">
+						<Image x:Name = "nurseProfileImage"/>
+					</StackLayout>
+					<StackLayout VerticalOptions = "End">
+						<Label x:Name = "nurseNameLabel" />
+						<StackLayout Orientation = "Horizontal">
+							<Image Source = "star.png" HeightRequest = "20" WidthRequest = "20"/>
+							<Image Source = "star.png" HeightRequest = "20" WidthRequest = "20"/>
+							<Image Source = "star.png" HeightRequest = "20" WidthRequest = "20"/>
+							<Image Source = "star.png" HeightRequest = "20" WidthRequest = "20"/>
+							<Image Source = "star.png" HeightRequest = "20" WidthRequest = "20"/>
+						</StackLayout>
+						<Label x:Name = "serviceCompletedLabel" />
+					</StackLayout>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

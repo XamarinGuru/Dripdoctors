@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Dripdoctors"
+		x:Class="Dripdoctors.AccountProfileEditPage"
+		BackgroundImage  = "background.jpg">
+	<ContentPage.Content>
+		<StackLayout  HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand">
+			<StackLayout BackgroundColor = "#01b3f0" Padding = "5" Orientation = "Horizontal" HorizontalOptions = "FillAndExpand" VerticalOptions = "Start" HeightRequest = "60">
+				<Grid HorizontalOptions = "FillAndExpand" VerticalOptions = "EndAndExpand">
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "40"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = ".7*"/>
+						<ColumnDefinition Width = "1.6*"/>
+						<ColumnDefinition Width = ".7*"/>
+					</Grid.ColumnDefinitions>
+					<local:CustomButton x:Name = "btnProfileBack" Text = "Cancel" TextColor = "#fff" Font = "Golden Sans Light.otf" Grid.Row = "0" Grid.Column = "0" VerticalOptions = "EndAndExpand" HorizontalOptions = "Start"/>
+					<Label Text = "Edit Profile" TextColor = "#fff" FontSize = "20" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" Grid.Row = "0" Grid.Column = "1" VerticalOptions = "Center" HorizontalOptions = "CenterAndExpand" LineBreakMode = "NoWrap">
+						<Label.FontFamily>
+							<OnPlatform x:TypeArguments="x:String">
+								<OnPlatform.iOS>Golden Sans Light</OnPlatform.iOS>
+								<OnPlatform.Android>Golden Sans Light.otf</OnPlatform.Android>
+							</OnPlatform>
+						</Label.FontFamily>
+					</Label>
+					<local:CustomButton x:Name = "btnProfileSave" Text = "Save" TextColor = "#fff" Font = "Golden Sans Light.otf" Grid.Row = "0" Grid.Column = "2" VerticalOptions = "EndAndExpand" HorizontalOptions = "End"/>
+				</Grid>
+			</StackLayout>
+			<RelativeLayout
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,ElementName=topNavigationLayout,Property=Width,Factor=0,Constant=0}"
+			    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,ElementName=topNavigationLayout,Property=Height,Factor=.1,Constant=0}"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+				RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.9}">
+				
+				<StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor = "#fff"
+					RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0,Constant=0}"
+				    RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.27,Constant=0}"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+					RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.73, Constant = 0}">
+					<Grid RowSpacing = "5" ColumnSpacing = "2" HorizontalOptions = "CenterAndExpand" VerticalOptions = "FillAndExpand"  Padding = "0,50,20,10">
+						<Grid.RowDefinitions>
+							<RowDefinition Height = "40"/>
+							<RowDefinition Height = "40"/>
+							<RowDefinition Height = "40"/>
+							<RowDefinition Height = "40"/>
+							<RowDefinition Height = "40"/>
+							<RowDefinition Height = "40"/>
+							<RowDefinition Height = "40"/>
+							<RowDefinition Height = "40"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width = "1*"/>
+							<ColumnDefinition Width = "1*"/>
+							<ColumnDefinition Width = "1*"/>
+							<ColumnDefinition Width = "1*"/>
+						</Grid.ColumnDefinitions>
+						<Label Text = "First Name:" TextColor = "Black" FontAttributes="Bold" VerticalTextAlignment = "Center" HorizontalTextAlignment = "End" Grid.Row = "0" Grid.Column = "0">
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+									<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+						<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "1"  Grid.Row = "0" Grid.Column = "1" Grid.ColumnSpan = "3" Opacity = ".5">
+							<Entry x:Name = "txtFname" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" HeightRequest = "38"/>
+						</StackLayout>
+						<Label Text = "Last Name:" TextColor = "Black" FontAttributes="Bold" VerticalTextAlignment = "Center" HorizontalTextAlignment = "End" Grid.Row = "1" Grid.Column = "0">
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+									<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+						<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "1" Grid.Row = "1" Grid.Column = "1" Grid.ColumnSpan = "3" Opacity = ".5">
+							<Entry x:Name = "txtSname" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" HeightRequest = "38"/>
+						</StackLayout>
+						<Label Text = "Phone:" TextColor = "Black" FontAttributes="Bold" VerticalTextAlignment = "Center" HorizontalTextAlignment = "End" Grid.Row = "2" Grid.Column = "0">
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+									<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+						<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "1"  Grid.Row = "2" Grid.Column = "1" Grid.ColumnSpan = "3" Opacity = ".5">
+							<Entry x:Name = "txtPhone" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" HeightRequest = "38"/>
+						</StackLayout>
+						<Label Text = "Country:" TextColor = "Black" FontAttributes="Bold" VerticalTextAlignment = "Center" HorizontalTextAlignment = "End" Grid.Row = "3" Grid.Column = "0">
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+									<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+						<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "1" Grid.Row = "3" Grid.Column = "1" Grid.ColumnSpan = "3" Opacity = ".5">
+							<Entry x:Name = "txtCountry" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" HeightRequest = "38"/>
+						</StackLayout>
+						<Label Text = "City:" TextColor = "Black" FontAttributes="Bold" VerticalTextAlignment = "Center" HorizontalTextAlignment = "End" Grid.Row = "4" Grid.Column = "0">
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+									<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+						<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "1" Grid.Row = "4" Grid.Column = "1" Grid.ColumnSpan = "3" Opacity = ".5">
+							<Entry x:Name = "txtCity" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" HeightRequest = "38"/>
+						</StackLayout>
+						<Label Text = "Address:" TextColor = "Black" FontAttributes="Bold" VerticalTextAlignment = "Center" HorizontalTextAlignment = "End" Grid.Row = "5" Grid.Column = "0">
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+									<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+						<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "1" Grid.Row = "5" Grid.Column = "1" Grid.ColumnSpan = "3" Opacity = ".5">
+							<Entry x:Name = "txtAddress" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" HeightRequest = "38"/>
+						</StackLayout>
+						<Label Text = "Zip:" TextColor = "Black" FontAttributes="Bold" VerticalTextAlignment = "Center" HorizontalTextAlignment = "End" Grid.Row = "6" Grid.Column = "0">
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+									<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+						<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "1" Grid.Row = "6" Grid.Column = "1" Grid.ColumnSpan = "3" Opacity = ".5">
+							<Entry x:Name = "txtZip" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" HeightRequest = "38"/>
+						</StackLayout>
+						<Label Text = "Gender:" TextColor = "Black" FontAttributes="Bold" VerticalTextAlignment = "Center" HorizontalTextAlignment = "End" Grid.Row = "7" Grid.Column = "0">
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+									<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+						<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "1" Grid.Row = "7" Grid.Column = "1" Opacity = ".5">
+							<Entry x:Name = "txtGender" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" HeightRequest = "38"/>
+						</StackLayout>
+						<Label Text = "Age:" TextColor = "Black" FontAttributes="Bold" VerticalTextAlignment = "Center" HorizontalTextAlignment = "End" Grid.Row = "7" Grid.Column = "2">
+							<Label.FontFamily>
+								<OnPlatform x:TypeArguments="x:String">
+									<OnPlatform.iOS>GothamPro</OnPlatform.iOS>
+									<OnPlatform.Android>GothamPro.otf</OnPlatform.Android>
+								</OnPlatform>
+							</Label.FontFamily>
+						</Label>
+						<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#01b3f0" Padding = "1" Grid.Row = "7" Grid.Column = "3" Opacity = ".5">
+							<Entry x:Name = "txtAge" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" HeightRequest = "38"/>
+						</StackLayout>
+					</Grid>
+				</StackLayout>
+				<Image x:Name = "imgProfile"
+		            Source = "DD_Account_profile.jpg" BackgroundColor = "#fff"
+						RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.37}"
+						RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.3}"
+						RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0, Constant = 15}" 
+						RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant = 15}" />
+				<StackLayout VerticalOptions = "FillAndExpand" Padding = "10,0,20,0"
+					HorizontalOptions = "FillAndExpand" Orientation = "Horizontal"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.7, Constant = -40}"
+					RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.41, Constant = 0}" 
+					RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.28, Constant = 0}">
+					<Image x:Name = "btnProfileCamera" VerticalOptions = "CenterAndExpand" HorizontalOptions = "StartAndExpand" HeightRequest="30" WidthRequest="30" />
+					<Image x:Name = "btnProfileUpload" VerticalOptions ="CenterAndExpand" HorizontalOptions ="CenterAndExpand" HeightRequest="30" WidthRequest="30" />
+					<Image x:Name = "btnProfileCancel" VerticalOptions = "CenterAndExpand" HorizontalOptions = "EndAndExpand" HeightRequest="30" WidthRequest="30" />
+				</StackLayout>
+			</RelativeLayout>
+      	</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

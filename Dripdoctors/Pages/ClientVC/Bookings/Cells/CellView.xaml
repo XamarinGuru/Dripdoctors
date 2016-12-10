@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseCellView xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:local="clr-namespace:Dripdoctors"
+		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+		x:Class="Dripdoctors.CellView">
+	<RelativeLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Padding = "10" BackgroundColor = "#fff">
+		<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=.6}"
+				RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=0}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
+		    	RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=0}">
+			<StackLayout VerticalOptions = "FillAndExpand" Orientation = "Horizontal" Padding = "20,10,20,10">
+				<ffimageloading:CachedImage  x:Name = "serviceImage" Source  = "{Binding service_id.service_img_icon}" WidthRequest = "45" HorizontalOptions = "StartAndExpand" VerticalOptions = "StartAndExpand" DownsampleToViewSize="true"/>
+				<StackLayout Padding = "10" HorizontalOptions = "EndAndExpand" VerticalOptions = "StartAndExpand">
+					<Label x:Name = "serviceNameLabel" Text = "{Binding service_id.service_name}" HorizontalTextAlignment = "Center" HorizontalOptions = "CenterAndExpand" VerticalOptions = "StartAndExpand"/>
+					<Label x:Name = "servicePriceLabel" Text = "" HorizontalOptions = "CenterAndExpand" VerticalOptions = "EndAndExpand"/>
+				</StackLayout>
+			</StackLayout>
+			<StackLayout Padding = "5" VerticalOptions = "CenterAndExpand" HorizontalOptions = "FillAndExpand">
+				<Label x:Name = "dateLabel" Text = "{Binding booking_date}" HorizontalOptions = "StartAndExpand" VerticalOptions = "StartAndExpand"/>
+				<Label x:Name = "bookingTypeLabel" Text = "{Binding booking_type}" HorizontalOptions = "StartAndExpand" VerticalOptions = "CenterAndExpand"/>
+				<Label x:Name = "addressLabel" Text = "{Binding client_address}" HorizontalOptions = "StartAndExpand" VerticalOptions = "EndAndExpand"/>
+			</StackLayout>
+			<StackLayout Padding = "5" VerticalOptions = "EndAndExpand" HorizontalOptions = "FillAndExpand">
+				<Button x:Name = "optionButton" Text = "OPTIONS" BackgroundColor = "#01b3f0" BorderRadius = "0" TextColor = "#fff" HeightRequest = "45" WidthRequest = "100" VerticalOptions = "FillAndExpand" HorizontalOptions = "StartAndExpand"/>
+			</StackLayout>
+		</StackLayout>
+		<StackLayout HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" Padding = "5,10,5,5"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=.4}"
+				RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=0}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=.6,Constant=0}"
+		    	RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=0,Constant=0}">
+			<Label x:Name = "bookingStateLabel" Text = "{Binding status}" TextColor = "#ddd" HorizontalOptions = "FillAndExpand"/>
+			<Label x:Name = "commentLabel" Text = "" TextColor = "#01b3f0" HorizontalOptions = "FillAndExpand"/>
+			<StackLayout Padding = "1" BackgroundColor = "#01b3f0" HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "4*"/>
+						<RowDefinition Height = ".6*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<ffimageloading:CachedImage  x:Name = "nurseImage" Source  = "{Binding nurseInfo.img_url}" DownsampleToViewSize="true" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Aspect = "AspectFill"
+						Grid.Row = "0" Grid.Column = "0"/>
+					<Label x:Name = "nurseNameLabel" Text = "{Binding nurseInfo.fname}" TextColor = "#fff" HeightRequest = "30" HorizontalOptions = "CenterAndExpand" VerticalOptions = "FillAndExpand"
+						Grid.Row = "1" Grid.Column = "0"/>
+				</Grid>
+			</StackLayout>
+		</StackLayout>
+		<StackLayout x:Name = "popupLayout1" HorizontalOptions = "FillAndExpand" VerticalOptions = "EndAndExpand" BackgroundColor = "#ddd" Opacity = ".95" Orientation = "Horizontal" IsVisible = "false"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
+		    	RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=1,Constant=0}">
+			<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "StartAndExpand" Padding = "40,0,0,0">
+				<Button x:Name = "trackNurseButton" Text = "TRACK NURSE" TextColor = "#fff" BackgroundColor = "#01b3f0" BorderRadius = "0" HeightRequest = "45" WidthRequest = "150"/>
+			</StackLayout>
+			<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "EndAndExpand" Padding = "5,10,40,10">
+				<Button x:Name = "sendMeessageButton" Text = "SEND MESSAGE" TextColor = "#fff" BorderColor = "#fff" BorderWidth = "3" BorderRadius = "0" HeightRequest = "45" WidthRequest = "150"/>
+				<Button x:Name = "cancelBookingButton" Text = "CANCEL BOOKING" TextColor = "#fff" BorderColor = "#fff" BorderWidth = "3" BorderRadius = "0" HeightRequest = "45" WidthRequest = "150"/>
+			</StackLayout>
+		</StackLayout>
+		<StackLayout x:Name = "popupLayout2" HorizontalOptions = "FillAndExpand" VerticalOptions = "EndAndExpand" BackgroundColor = "#ddd" Opacity = ".95" Orientation = "Horizontal" IsVisible = "false"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
+		    	RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=1,Constant=0}">
+			<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "StartAndExpand" Padding = "40,0,0,0">
+				<Button x:Name = "applyButton" Text = "TRACK NURSE" TextColor = "#fff" BackgroundColor = "#01b3f0" BorderRadius = "0" HeightRequest = "45" WidthRequest = "150"/>
+			</StackLayout>
+			<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "EndAndExpand" Padding = "5,10,40,10">
+				<Button x:Name = "removeButton" Text = "SEND MESSAGE" TextColor = "#fff" BorderColor = "#fff" BorderWidth = "3" BorderRadius = "0" HeightRequest = "45" WidthRequest = "150"/>
+			</StackLayout>
+		</StackLayout>
+		<StackLayout x:Name = "popupLayout3" HorizontalOptions = "FillAndExpand" VerticalOptions = "EndAndExpand" BackgroundColor = "#ddd" Opacity = ".95" Orientation = "Horizontal" IsVisible = "false"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+				RelativeLayout.XConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
+		    	RelativeLayout.YConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Y,Factor=1,Constant=0}">
+			<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "StartAndExpand" Padding = "40,0,0,0">
+				<Button x:Name = "editBookingButton" Text = "EDIT BOOKING" TextColor = "#fff" BackgroundColor = "#01b3f0" BorderRadius = "0" HeightRequest = "45" WidthRequest = "150"/>
+			</StackLayout>
+			<StackLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "EndAndExpand" Padding = "5,10,40,10">
+				<Button x:Name = "sendMeessageButton1" Text = "SEND MESSAGE" TextColor = "#fff" BorderColor = "#fff" BorderWidth = "3" BorderRadius = "0" HeightRequest = "45" WidthRequest = "150"/>
+				<Button x:Name = "cancelBookingButton1" Text = "CANCEL BOOKING" TextColor = "#fff" BorderColor = "#fff" BorderWidth = "3" BorderRadius = "0" HeightRequest = "45" WidthRequest = "150"/>
+			</StackLayout>
+		</StackLayout>
+	</RelativeLayout>
+</local:BaseCellView>

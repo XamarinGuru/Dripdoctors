@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage  xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+		x:Class="Dripdoctors.CancelPopup">
+		<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "CenterAndExpand" Padding = "30">
+			<StackLayout BackgroundColor = "#fff" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" Padding = "10,30,10,20">
+				<Label Text = "Are you sure you want to CANCEL your booking?" LineBreakMode = "WordWrap" HorizontalTextAlignment = "Center"/>
+				<Label Text = "NOTE: You can change your current booking Date, Time, Service, Location or Nurse through our Edit Booking option." LineBreakMode = "WordWrap" HorizontalTextAlignment = "Center"/>
+				<StackLayout Padding = "0" Orientation = "Horizontal" HorizontalOptions = "FillAndExpand">
+					<Grid HorizontalOptions = "FillAndExpand">
+						<Grid.RowDefinitions>
+							<RowDefinition Height = "1*"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width = "1*"/>
+							<ColumnDefinition Width = "1*"/>
+						</Grid.ColumnDefinitions>
+						<Button x:Name = "closeButton" Text = "CLOSE" TextColor = "#fff" BackgroundColor = "#01b3f0" BorderRadius = "0" Grid.Row = "0" Grid.Column = "0"/>
+						<Button x:Name = "cancelBookingButton" Text = "CANCEL BOOKING" TextColor = "#fff" BackgroundColor = "#01b3f0" BorderRadius = "0" Grid.Row = "0" Grid.Column = "1"/>
+					</Grid>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+</pages:PopupPage>

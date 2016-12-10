@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Dripdoctors.ServiceConfirmPage"
+		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+		xmlns:local="clr-namespace:Dripdoctors"
+		BackgroundImage = "background.jpg">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions = "Start" HorizontalOptions = "FillAndExpand" Spacing = "0">
+			<StackLayout x:Name = "headerLayout" 
+				VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand" HeightRequest = "50"
+				Padding = "10, 20, 10, 5" Orientation = "Horizontal" BackgroundColor = "#01b3f0" 
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}">
+				<Grid x:Name = "logoGrid" VerticalOptions = "FillAndExpand" HorizontalOptions = "FillAndExpand"
+					RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}">
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "1*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+						<ColumnDefinition Width = "1*"/>
+					</Grid.ColumnDefinitions>
+					<ffimageloading:CachedImage x:Name = "logoButton" Grid.Row = "0" Grid.Column = "0" HorizontalOptions = "Start" HeightRequest = "25" WidthRequest = "25"/>
+					<Label x:Name = "productLabel" Text = "SERVICE" TextColor = "#fff" HorizontalTextAlignment = "Center" VerticalOptions = "Center" Grid.Row = "0" Grid.Column = "1"/>
+					<local:CustomButton x:Name = "userButton" TextColor = "#fff" Grid.Row = "0" Grid.Column = "2" HorizontalOptions = "End"/>
+				</Grid>
+			</StackLayout>
+			<StackLayout x:Name = "bodyLayout" VerticalOptions = "Start" HorizontalOptions = "FillAndExpand" BackgroundColor = "#fff" Padding = "10,30,10,15" Spacing = "10">
+				<Label Text = "Request Received!" FontSize = "30" FontAttributes = "Bold" VerticalOptions = "EndAndExpand" HorizontalOptions = "CenterAndExpand">
+					<Label.FontFamily>
+						<OnPlatform x:TypeArguments="x:String">
+							<OnPlatform.iOS>GothamPro-Medium</OnPlatform.iOS>
+							<OnPlatform.Android>GothamPro-Medium.otf</OnPlatform.Android>
+						</OnPlatform>
+					</Label.FontFamily>
+				</Label>
+				<ffimageloading:CachedImage x:Name = "serviceImage" Source = "" HorizontalOptions = "CenterAndExpand" HeightRequest = "170" WidthRequest = "170"/>
+				<Label x:Name = "welcomeLabel1" FontSize = "20" LineBreakMode = "WordWrap" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center" HorizontalOptions = "CenterAndExpand">
+					<Label.FontFamily>
+						<OnPlatform x:TypeArguments="x:String">
+							<OnPlatform.iOS>GothamPro-Light</OnPlatform.iOS>
+							<OnPlatform.Android>GothamPro-Light.otf</OnPlatform.Android>
+						</OnPlatform>
+					</Label.FontFamily>
+				</Label>
+
+				<local:CustomLabel x:Name = "welcomeLabel2" FontSize = "20" LineBreakMode = "WordWrap" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center" HorizontalOptions = "CenterAndExpand">
+					<Label.FontFamily>
+						<OnPlatform x:TypeArguments="x:String">
+							<OnPlatform.iOS>GothamPro-Light</OnPlatform.iOS>
+							<OnPlatform.Android>GothamPro-Light.otf</OnPlatform.Android>
+						</OnPlatform>
+					</Label.FontFamily>
+				</local:CustomLabel>
+				<StackLayout HorizontalOptions = "FillAndExpand">
+					<Button x:Name = "bookingButton" Text = "BOOKINGS" TextColor = "#fff" BackgroundColor = "#01b3f0" BorderRadius = "0"/>
+					<Button x:Name = "anotherButton" Text = "BOOK ANOTHER SERVICE" TextColor = "#fff" BackgroundColor = "#c2c2c2" BorderRadius = "0"/>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+		x:Class="Dripdoctors.ServiceProductVeiw">
+		<StackLayout VerticalOptions = "CenterAndExpand" HorizontalOptions = "CenterAndExpand" Padding = "10">
+			<StackLayout BackgroundColor = "#fff" Padding = "0" Spacing = "10">
+				<StackLayout HorizontalOptions = "End" VerticalOptions = "Center" Padding = "5">
+					<Image x:Name = "closeButton" HorizontalOptions = "End" HeightRequest = "20" WidthRequest = "20"/>
+				</StackLayout>
+				<StackLayout HorizontalOptions = "CenterAndExpand">
+					<Label x:Name = "nameLabel" FontAttributes = "Bold" FontSize = "22" TextColor = "#000" LineBreakMode = "NoWrap">
+						<Label.FontFamily>
+							<OnPlatform x:TypeArguments="x:String">
+								<OnPlatform.iOS>Gilroy-ExtraBold</OnPlatform.iOS>
+								<OnPlatform.Android>Gilroy-ExtraBold.otf</OnPlatform.Android>
+							</OnPlatform>
+						</Label.FontFamily>
+					</Label>
+				</StackLayout>
+				<!--<StackLayout HorizontalOptions = "CenterAndExpand">
+					<Image x:Name = "productImage" HorizontalOptions = "Center"/>
+				</StackLayout>-->
+				<StackLayout HorizontalOptions = "CenterAndExpand" Padding = "20,0,20,20">
+					<Label x:Name = "contentLabel" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center" LineBreakMode = "WordWrap">
+						<Label.FontFamily>
+							<OnPlatform x:TypeArguments="x:String">
+								<OnPlatform.iOS>Gilroy-Light</OnPlatform.iOS>
+								<OnPlatform.Android>Gilroy-Light.otf</OnPlatform.Android>
+							</OnPlatform>
+						</Label.FontFamily>
+					</Label>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+</pages:PopupPage>
